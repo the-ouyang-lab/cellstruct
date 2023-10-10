@@ -43,11 +43,11 @@ run_cellstruct <- function(seu, seuName, ref.proj, target.proj, clusterVar,
     data <- seu@reductions[[proj]]@cell.embeddings
 
     seu <- AddMetaData(object = seu,
-                      metadata = calcGS(ref, data, num_waypoint, cor_method, nCores = nCores, seed = seed),
+                      metadata = calcGS(ref, data, num_waypoint, cor_method, chunkSize = chunkSize, nCores = nCores, seed = seed),
                       col.name = paste0(toupper(proj),"_gs"))
     if(plot_LS){
       seu <- AddMetaData(object = seu,
-                         metadata = calcLS(ref, data, num_neighbor, dist_power, nCores = nCores),
+                         metadata = calcLS(ref, data, num_neighbor, dist_power, chunkSize = chunkSize, nCores = nCores),
                          col.name = paste0(toupper(proj),"_ls"))
     }
     gc_pearson <- calcGC(ref,data,clusID, cor_method) #~1 sec
