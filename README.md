@@ -5,7 +5,7 @@ cellstruct provides three distinct metric scores to quantify the preservation of
 * local single-cell (LS) - ratio of average squared distances of reference and reduced neighbors from the target cell, in reference embedding.
 * global cluster (GC) - Pearson's correlation of two centroid-centroid distance matrices from reference and reduced embeddings (centroid refers to cluster centroid).
 
-cellstruct is available as an R package.
+cellstruct is available as an R package. It is developed in Ouyang Lab by Jui Wan Loh and John Ouyang.
 
 ## Installation
 To run cellstruct, open R and install cellstruct:
