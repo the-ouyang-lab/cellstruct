@@ -8,8 +8,14 @@ cellstruct provides three distinct metric scores to quantify the preservation of
 cellstruct is available as an R package. It is developed in Ouyang Lab by Jui Wan Loh and John Ouyang.
 
 ## Installation
-To run cellstruct, open R and install cellstruct:
+The following dependencies are required to install and run cellstruct:
+* reticulate
+* Matrix
+* Seurat
+* ComplexHeatmap 
 ```R
+install.packages("reticulate") #do it for Matrix and Seurat too
+devtools::install_github("jokergoo/ComplexHeatmap")
 devtools::install_github("the-ouyang-lab/cellstruct", build_vignettes=TRUE)
 ```
 
